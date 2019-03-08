@@ -5,12 +5,6 @@ var connect = require('gulp-connect'),
     zip = require('gulp-zip'),
     xml2js = require('xml2js');
 
-gulp.task('build', function() {
-  return gulp.src('src/**/*.*')
-    .pipe(zip('archive.zip'))
-    .pipe(gulp.dest('./dist'));
-});
-
 gulp.task('generate', function(done) {
   fs.readFile('./src/imsmanifest.tmpl.xml', function(err, data) {
     var parser = new xml2js.Parser();
@@ -49,6 +43,12 @@ gulp.task('generate', function(done) {
       });
     });
   });
+});
+
+gulp.task('build', gulp.parallel('generate'), function() {
+  return gulp.src('src/**/*.*')
+    .pipe(zip('archive.zip'))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('connect', function() {
