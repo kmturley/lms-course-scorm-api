@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LMS Scorm API</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <div id="frame" class="frame">
+    <div class="page default">
+      <h1>Learning Management System app</h1>
+      <p>Example LMS app using the Scorm API</p>
+      <a href="#/step">Continue</a>
+    </div>
+    <div class="page step">
+      <h1>Step one</h1>
+      <p>Some content here</p>
+      <a href="#/finish">Finish</a>
+    </div>
+    <div class="page finish">
+      <h1>Finished!</h1>
+      <p>Thanks</p>
+    </div>
+  </div>
+  <script>
+    tl_sco_data = {
+      commit_url: "https://example.com/unit/complete/id:1819",
+      datafromlms: "",
+      lesson_location: "",
+      lesson_status: "incomplete",
+      score_raw: "",
+      scorm: {
+        frame_border: false,
+        height: 600,
+        src: "/shared/launchpage.html",
+        width: "100%",
+      },
+      student_id: "2",
+      student_name: "Bloggs,Joe",
+      suspend_data: "",
+      total_time: "0000:06:29.00",
+    }
+  </script>
+  <!-- <script src="js/scorm.js"></script> -->
+  <script src="js/index.js"></script>
+  <script>
+    var scorm = new Scorm();
+    scorm.init({
+      id: 'frame'
+    });
+  </script>
+</body>
+</html>

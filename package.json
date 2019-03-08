@@ -1,0 +1,24 @@
+{
+  "name": "lms-course-scorm-api",
+  "version": "0.0.1",
+  "description": "Example Learning Management System course using the SCORM API",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "LMS",
+    "Course",
+    "SCORM",
+    "API"
+  ],
+  "author": "kmturley",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-zip": "^4.2.0"
+  }
+}
