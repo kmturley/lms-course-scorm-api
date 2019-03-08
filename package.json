@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
+    "generate": "gulp generate",
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,7 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-connect": "^5.7.0",
-    "gulp-zip": "^4.2.0"
+    "gulp-zip": "^4.2.0",
+    "xml2js": "^0.4.19"
   }
 }
